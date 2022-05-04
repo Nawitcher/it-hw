@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Старий і море</title>
+
+	<style type="text/css">
+		#top{
+			background:url("img/bg.jpg") no-repeat;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 600px;
+			position: relative;
+			bottom: 23px;
+			margin-left: 0;
+		}
+		.head{
+			width: 100%;
+			height: 15%;
+			display: flex;
+			justify-content: space-around;
+			position: relative;
+			bottom: -23px;
+		}
+		.head a{
+			color: white;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		.mainText{
+			margin-top: 10%;
+			height: 60%;
+			position: relative;
+			text-align: center;
+			color: white;
+			display: block;
+		}
+		.txt{
+			font-size: 65px;
+			font-style: oblique;
+		}
+		.txt span{
+			color: #d61818;
+		}
+		.head a:hover{
+			color:#d61818;
+			transition-duration: 1s;
+			text-decoration: underline;
+		}
+		h2{
+			text-align: center;
+			color: #d61818;
+			font-style: oblique;
+		}
+		.aut{
+			
+			display: flex;
+			flex-direction: column;
+		}
+		.aut1{
+			
+			display: flex;
+			flex-direction: column;
+
+		}
+		.aut1pre{
+			display: flex;
+			flex-direction: column;
+		}
+		.about{
+			width: 100%
+			height:200px;
+			border: 3px dashed grey;
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			font-size: 17px;
+
+		}
+		.el{
+			height: 400px;
+			width: 250px;
+			border: 2px solid grey;
+		}
+		body a.arrowDown {
+   font-size: 30px;
+   text-decoration: none;
+   color: #fc635e;
+   border: 1px solid #fc635e;
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+}
+
+body a.arrowDown:hover {
+   background: #fc635e;
+   color: #ffffff;
+}
+	.ti{
+		font-size: 46px;
+		text-align: center;	
+		color: grey;
+		text-decoration: dashed;
+	}
+	.ti span{
+		color:#d61818; 
+		text-decoration: underline;
+	}
+	.ti1{
+		font-size: 36px;
+		text-align: center;	
+		color: grey;
+		text-decoration: dashed;
+	}
+	.ti1 span{
+		color:#d61818; 
+		text-decoration: underline;
+	}
+	.tv{
+		display: flex;
+		justify-content: space-around;
+	}
+	.wat{
+		font-size: 15px;
+		color: black;
+		text-align:center;
+	}
+	.w{
+		color: #706c6c;
+		text-align: center;
+		font-size: 25px;
+	}
+	.el:hover{
+		transform: scale(1.1);
+		transition: 2s;
+	}
+	.dropbtn {
+		margin-top: 8px;
+		display: flex;
+  background-color:#d61818;
+  border-radius: 30px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: grey;}
+
+.dropdown:hover .dropdown-content {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #d61818;
+}
+#tvir{
+	background-image: url("img/bg.jpg");
+	background-size: 100% 100%;
+	margin-top: 10px;
+	width: 100%;
+	height: 600px;
+	text-align: center;
+}
+.scrollup{
+width:40px;
+height:40px;
+opacity: 0.7;
+position:fixed;
+bottom:50px;
+right:100px;
+display:none;
+text-indent:-9999px;
+background: url('img/icon_top.png') no-repeat;
+}
+	#dodat{
+		display: flex;
+		justify-content: space-around;
+	}
+	#links{
+		width: 100%;
+		height: 500px;
+		margin-top: 4%;
+		background: url(img/pesok_chernyj_relef_133792_1600x900.jpg);
+		background-size: 100% 100%;
+	}
+	.aut1pre a{
+		color: white;
+		margin-top: 1%;
+	}
+	/*#footer{
+		width: 100%;
+		height: 70px;
+		background:url(img/galka_kamni_chernyj_144176_1600x900.jpg);
+	}*/
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+</head>
+<body>
+	<div id="top">
+		<div class="head">
+			<a href="#avtor">Aвтор</a>
+			<a href="#proTvir">Про твір</a>
+			<a href="#inf">Сенс твору</a>
+			<a href="#myst">Твір у мистецтві</a>
+			<a href="#dodat">Додаткові матеріали</a>
+			<a href="#dze">Використані джерела</a>
+		</div>
+		<div class="mainText">
+        	<p class="txt">
+        		<span>Ернест Хемінгуей</span> «Старий і море»
+        	</p>
+      	</div>
+	</div>
+	<div class="aut">
+		<a name="avtor"><h2>Ернест Хемінгуей</h2></a>
+		<div class="about">
+		
+			 <p>Ерне́ст Мі́ллер Хемінгуе́й (21 липня 1899 — 2 липня 1961) — американський письменник і журналіст, лауреат Нобелівської премії з літератури 1954 року, лауреат Пулітцерівської премії 1953 року. Здобув широку популярність завдяки своїм романам та оповіданням, а також завдяки активному та наповненому пригодами життю. Його лаконічний і насичений стиль оповіді відіграв значну роль у літературі XX століття. У 1993 році на його честь названо малу планету 3656 Хемінгуей. За своє життя написав та опублікував 7 романів, 6 збірників оповідань та 2 документальні роботи. Додаткові роботи, до яких належать 3 романи, 4 збірки оповідань, 3 документальні праці, опубліковано посмертно. Багато з його праць вважаються класикою американської літератури.1959 року Фідель Кастро прийшов до влади на Кубі. 1960 року письменник повернувся до США, Айдахо. Останні роки життя Хемінгуей страждав на тяжку депресію і розлади психіки на тлі цирозу печінки. У 1960 році він лікувався в клініці Майо в Рочестері (штат Міннесота) з діагнозом депресії і серйозного розумового розладу. Після повернення з лікарні Хемінгуей вкоротив собі віку, вистріливши собі в лоба з мисливської рушниці, яку подарував йому його дідусь. Це відбулося 2 липня 1961 році у його власному будинку в Кетчумі, штат Айдахо, США.</p>
+			 <img src="img/завантаження.jpg" style="width: 320px;height: 250px;">
+			<!-- <img src="img/hemingway.jpg" style="height: 250px;"> -->
+		</div>
+		<!-- <a href="#column" class="arrowDown" onclick="show('block')">&darr;</a> -->
+		<!-- <div class="dropdown">
+  			<button class="dropbtn">Додатково:</button>
+  			<div class="dropdown-content">
+  			<a href="#">Link 1</a>
+  			<a href="#">Link 2</a>
+  			<a href="#">Link 3</a>
+  			</div>
+		</div> -->
+		<div class="aut1">
+			<p class="ti">Найвідоміші твори <span>письменника</span></p>
+			<div class="tv">
+				<div class="el">
+					<img src="img/India_main.jpg" style="width: 250px;height: 180px;margin: 0 auto;">
+					<p class="w">Індійський табір</p>
+					<p class="wat">«Індейське селище» спочатку представляло 29-сторінковий рукопис без назви, але Хемінгуей скоротив його до семи сторінок. У 1924 році 7-сторінкова історія була опублікована Ф.М. Фордом у Парижі</p>
+				</div>
+				<div class="el">
+					<img src="img/250px-Sunrise_Theodosia.jpg" style="width: 250px;height: 180px;margin: 0 auto;">
+					<p class="w">І сонце сходить</p>
+					<p class="wat">Роман вперше був надрукований у жовтні 1926 року в США, видавництвом Charles Scribner's Sons.
+
+У 1920-ті роки Хемінгуей жив у Парижі, де працював власкором газети Торонто Стар. </p>
+				</div>
+				<div class="el">
+					<img src="img/завантаження (1).jpg"  style="width: 250px;height: 180px;margin: 0 auto;" >
+					<p class="w">По кому подзвін</p>
+					<p class="wat">Хемінгуей написав «По кому подзвін» упродовж 1939 року, працюючи на Кубі, в Кі-Весті та Сан-Веллі, Айдахо. Працюючи над рукописом на Кубі, письменник мешкав у готелі Амбос-Мундос. Роботу над книгою було завершено в липні 1940 року</p>
+				</div>
+				<div class="el">
+					<a name="column"><img src="img/Open_sea_(july_2021).jpg" style="width: 250px;height: 180px;margin: 0 auto;"></a>
+					<p class="w">Старий і море</p>
+					<p class="wat">Історія створення повісті «Старий і море» бере свій початок 1936 року, коли Хемінгуей опублікував у часописі «Есквайр» нарис про дійсний випадок у Гольфстримі: рибалка спіймав величезну рибину, яка довго тягла за собою човника</p>
+				</div>
+			</div>
+		</div>
+<!-- 		<div class="dropdown">
+			<p class="ti1"> Додаткова інформація про письменника<span>(біографія, творчість)</span></p>
+		</div> -->
+	</div>
+	<!-- <div id="tvir">
+		<a name="proTvir"><p class="txt">
+        	<span>«Старий і море»</span> 
+        </p></a>
+        <p style="color: white;">«Стари́й і мо́ре» (англ. The Old Man And The Sea) — короткий роман-притча американського письменника Ернеста Хемінгуея, виданий у 1952 році. В основі роману розповідь про кубинського рибалку Сантьяго, його боротьбу з гігантською рибиною, що стала найбільшою здобиччю в його житті. Хемінгуей присвятив книгу своєму видавцеві Чарлзу Скрібнеру та літературному редакторові Максвеллу Перкінсу</p>
+        <p style="color: white;">Історія створення повісті «Старий і море» бере свій початок 1936 року, коли Хемінгуей опублікував у часописі «Есквайр» нарис про дійсний випадок у Гольфстримі: рибалка спіймав величезну рибину, яка довго тягла за собою човника; коли потерпілого знайшли, від риби майже нічого не залишилося, а старий ридав з відчаю.
+
+		У 1950 році Хемінгуей розпочав художню розробку давно знайденого сюжету, він мріяв написати об'ємний роман про життя рибальського селища, про долі його мешканців. Проте автор знайшов інший шлях відтворити світ рибальського життя: багато чого опустив у підтекст, створивши стислу, глибоку філософську притчу про людину й море. У 1952 році повість «Старий і море» була надрукована в журналі «Лайф»</p>
+		<p style="color: white;">Повість «Старий і море» розказує історію про змагання старого і досвідченого рибака з великим марліном. Історія починається з того, що досвідчений рибалка Сантьяго вже майже три місяці не впіймав жодної рибини і через це отримав прізвище «salao», що означає найбільшу форму невдахи. Він настільки невезучий, що його учню Маноліну батьки заборонили плавати з ним, а натомість рибалити з більш успішними рибалками. Однак хлопчик щодня навідується до халупи Сантьяго, готує йому їжу. Сантьяго каже Маноліну, що наступного дня він запливе далеко в Гольфстрим та що його чорна смуга закінчиться.
+
+На 85 день без улову Сантьяго виводить свій малий вітрильник далеко в море, закидає наживку, і за якийсь час підсікає велику рибу, як він припускає — марліна. Два дні і дві ночі триває змагання з гігантським марліном, і за цей час його човен все далі й далі відходить у відкрите море. Риба не здається, тягнучи за собою його човна. Так само вперто не відступає і рибалка, хоч його руки поранені волосінню. Він настільки поглинений цим протистоянням, що мимоволі починає співчувати і своєму супернику—рибині, говорить до неї і шкодує її.
+
+На третій день риба починає кружляти навколо човна, і виснажений Сантьяго напружує останні сили, щоб витягнути рибу на бік і заколоти марліна гарпуном. Сантьяго прив'язує марліна з боку човна і вирушає додому, сподіваючись на великі гроші, які він отримає, та уявляючи, скількох людей він нагодує.
+
+Але кров із ран марліна приваблює акул. вступивши з ними в сутичку, він вбиває своїм гарпуном велику Акулу-мако, але при цьому губить гарпуна. Він робить нову зброю, привязавши свого ножа до кінця весла, таким чином він вбиває п'ятьох акул, змушуючи інших до втечі. Але битва нерівна, вночі акули з'їдають майже все тіло рибини, від якої лишається тільки голова й скелет. Сантьяго почувається морально знищеним і кричить акулам, що вони вбили його мрії. Діставшись берега до світанку наступного дня, Сантьяго насилу піднімається до своєї хатини, несучи важку щоглу на плечі, а голову та скелет риби залишає на березі. Увійшовши до хати, він падає на ліжко й засинає.
+
+Наступного дня біля човна, до якого все ще прив'язаний скелет риби, один з рибалок вимірює його довжину, і каже що вона близько 5,5 м від носа до хвоста. Голову риби отримує Педріко, а інші рибалки кажуть Маноліну, щоб той передав старому, як їм шкода. Хлопчик журиться невдачею старого і плаче, бачучи його поранені руки. Манолін приносить йому газету та чашку кави. Коли старий встає, вони домовляються вийти в море ще раз разом. Заснувши знову, Сантьяго бачить уві сні свою юність: левів на африканському узбережжі.</p>
+	</div> -->
+	<!-- <div><a href="https://vseosvita.ua" target="_blank"></a>  <a href="https://vseosvita.ua/library/prezentacia-do-uroku-zarubiznoi-literaturi-v-11-klasi-na-temu-starij-i-more-povist-pritca-pro-ludinu-zittepodibnij-suzet-i-filosofsko-simvolicnij-zmis-117161.html" target="_blank"></a></div><iframe src="https://vseosvita.ua/library/embed/01002z8d-753e.pptx.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:0;border-width:0" width="636" height="636"></iframe> -->
+	<a name="proTvir"><iframe src="reveal.js-master/pres2.html" style="width: 100%;height: 600px;margin-top: 4%;">
+	</iframe></a>
+	<a name="inf"><iframe src="reveal.js-master/pres.html" style="width: 100%;height: 600px;margin-top: 4%;">
+	</iframe></a>
+	<a name="myst"><iframe src="reveal.js-master/pres1.html" style="width: 100%;height: 600px;margin-top: 4%;">
+	</iframe></a>
+	<div style="margin-top: 5%;">
+	<a name="dodat"><p class="ti">Додаткові <span>матеріали</span></p></a>
+	<div id="dodat">
+		<div class="el">
+			<iframe width="250" height="180" src="https://www.youtube.com/embed/gR3gGAA02T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p class="w" >Про автора</p>
+			<p class="wat">Літературне покликання Хемінгуея виявилося ще в шкільні роки. Після випуску із середнього навчального закладу він вирішив не вступати до університету, а переїхав до Канзасу, де влаштувався працювати у місцевій газеті «Star».</p>
+		</div>
+		<div class="el">
+			<iframe width="250" height="180" src="https://www.youtube.com/embed/17WXHaRRESU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p class="w">Творчість автора</p>
+			<p class="wat">Дебютом у світі літератури для Хемінгуея-журналіста став збірник "Три оповідання і десять віршів" (1923). Відтоді він вирішує покінчити з журналістикою, бо, за особистим зізнанням, "телеграфний стиль репотажу став затягувати його".</p>
+		</div>
+		<div class="el">
+			<iframe width="250" height="180" src="https://www.youtube.com/embed/VT6uZ2Qu3q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p class="w">Про твір</p>
+			<p class="wat">
+				84 дні старий рибалка Сантьяго безуспішно виходить у море на риболовлю. І якщо перші 40 днів він рибалив з маленьким хлопчиком Маноліно, то незабаром залишився без помічника. 
+
+			</p>
+		</div>
+		<div class="el">
+			<iframe width="250" height="180" src="https://www.youtube.com/embed/LVRAqyIXGbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p class="w" >Фільм</p>
+			<p class="wat">Відмінна екранізація культового роману видатного американського письменника Ернеста Хемінгуея про старого кубинського рибака та довгу історію його життя, яке пробігає перед його очима впродовж небезпечного полювання за величезною рибою.</p>
+		</div>
+		
+
+		
+	</div>
+</div>
+	<div id="links" style="margin-top: 5%;">
+		<p class="ti">Використанні <span>джерела</span></p>
+		<div class="aut1pre">
+			<a href="https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%BD%D0%B5%D1%81%D1%82_%D0%A5%D0%B5%D0%BC%D1%96%D0%BD%D0%B3%D1%83%D0%B5%D0%B9" style="color: white;">https://uk.wikipedia.org/wiki/%D0%95%D1%80%D0%BD%D0%B5%D1%81%D1%82_%D0%A5%D0%B5%D0%BC%D1%96%D0%BD%D0%B3%D1%83%D0%B5%D0%B9</a>
+			<a href="https://www.ukrlib.com.ua/bio-zl/printit.php?tid=4376" style="color: white;">https://www.ukrlib.com.ua/bio-zl/printit.php?tid=4376</a>
+			<a href="https://bookclub.ua/ru/read/hemingway/" style="color: white;">https://bookclub.ua/ru/read/hemingway/</a>
+			<a href="https://uk.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B8%D0%B9_%D1%96_%D0%BC%D0%BE%D1%80%D0%B5">https://uk.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B8%D0%B9_%D1%96_%D0%BC%D0%BE%D1%80%D0%B5</a>
+			<a href="https://www.ukrlib.com.ua/world/printit.php?tid=109">https://www.ukrlib.com.ua/world/printit.php?tid=109</a>
+			<a href="https://starylev.com.ua/staryy-i-more">https://starylev.com.ua/staryy-i-more</a>
+			<a href="https://dovidka.biz.ua/stariy-i-more-analiz/">https://dovidka.biz.ua/stariy-i-more-analiz/</a>
+			<a href="https://guru.net.ua/starij-i-more-heminguej-analiz/">https://guru.net.ua/starij-i-more-heminguej-analiz/</a>
+			<a href="https://vseosvita.ua/library/pasport-tvoru-ernesta-gemingvea-starij-i-more-256165.html?__cf_chl_tk=gpHM4bHKNFJ1QevcapRFBSjZftPhauO8VxQ66cMjnhU-1651605127-0-gaNycGzNCdE">https://vseosvita.ua/library/pasport-tvoru-ernesta-gemingvea-starij-i-more-256165.html?__cf_chl_tk=gpHM4bHKNFJ1QevcapRFBSjZftPhauO8VxQ66cMjnhU-1651605127-0-gaNycGzNCdE</a>
+			<a href="https://wallpaperscraft.ru/">https://wallpaperscraft.ru/</a>
+			<a href="https://ukr.school-essay.ru/analiz-povisti-xeminguejya-starij-i-more/" name="dze">https://ukr.school-essay.ru/analiz-povisti-xeminguejya-starij-i-more/</a>
+		</div>
+	</div>
+
+	<a href="#" class="scrollup">Наверх</a>
+	<script type="text/javascript">
+		alert("Новіцького Владислава 4-А")
+	</script>
+</body>
+</html>
